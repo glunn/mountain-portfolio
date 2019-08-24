@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'mountain-portfolio',
+    podModulePrefix: 'mountain-portfolio/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
