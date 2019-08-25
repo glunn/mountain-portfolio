@@ -46,7 +46,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Run `ember build --environment=production`
+Move the files into desired site file
+
+Make sure your `.htaccess` file (in main directory) includes:
+`RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !(?=jpg|png|gif|js|css|pdf|docx|htm)
+RewriteRule ^(.*)$ index.html`
 
 ## Further Reading / Useful Links
 
