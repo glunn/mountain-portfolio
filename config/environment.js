@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'mountain-portfolio',
     environment,
-    rootURL: 'sparkles.cf/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
