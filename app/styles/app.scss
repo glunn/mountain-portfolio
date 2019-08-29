@@ -8,7 +8,8 @@
 }
 
 .row {
-  background-color: #F1E1DB;
+  background: linear-gradient(#F1E1DB 50%, #616161 50%);
+  //background-color: #F1E1DB;
   overflow: hidden;
 }
 
@@ -136,6 +137,15 @@ This is needed for testing!
   }
 }
 
+.container {
+  display: flex;
+  margin: 100px;
+}
+.float-right {
+  align: right;
+  width: 50%;
+  display: inline-block;
+}
 
 /*
  * Extra utilities
