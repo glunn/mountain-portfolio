@@ -168,3 +168,8 @@ This is needed for testing!
     flex: 1;
   }
 }
+
+.bootstrap-styles {
+  @import "ember-bootstrap/bootstrap";
+}
+
