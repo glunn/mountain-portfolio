@@ -1,156 +1,21 @@
 @import "partials/variables";
+@import 'app/components/site-footer/stylesheet';
+@import 'app/components/sticky-mountains/stylesheet';
+
+.bootstrap-styles {
+  @import "ember-bootstrap/bootstrap";
+}
 
 .body, .ember-application {
   font-family: courier new;
-  overflow-x:hidden;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
-}
-
-.row {
-  background: linear-gradient(#F1E1DB 50%, #616161 50%);
-  //background-color: #F1E1DB;
-  overflow: hidden;
-}
-
-.col {
-  position: relative;
-  height: 150vh;
-  margin-bottom: 120vh;
-  width: 10%;
-}
-
-.col.off {
-  margin-top: 120vh;
-  margin-bottom: 20px;
-}
-img {
-  width: 101vw;
-  padding: 0;
-}
-
-.mtn__2 img {
-  margin-left: -100%;
-}
-.mtn__3 img {
-  margin-left: -200%;
-}
-.mtn__4 img {
-  margin-left: -300%;
-}
-.mtn__5 img {
-  margin-left: -400%;
-}
-.mtn__6 img {
-  margin-left: -500%;
-}
-
-.sticky-element {
-  overflow: visible;
-  box-sizing: border-box;
-}
-
-.small .sticky-element {
-    /* background-color: lightskyblue; */
-  height: 50vh;
-}
-
-.xsmall .sticky-element {
-    /* background-color: greenyellow; */
-    height: 10px;
-}
-
-.large .sticky-element {
-    /* background-color: deepskyblue; */
-    height: 120vh;
-}
-
-// .debug {
-//     background-color: red;
-//     color: white;
-//     padding: 5px 10px;
-// }
-
-.demo {
-    display: flex;
-    // justify-content: space-around;
-}
-
-.demo .col {
-    // border: solid 2px red;
-    width: 10%;
-}
-
-/*
-This is needed for testing!
-*/
-#ember-testing-container {
-    /*position: absolute !important;*/
-    /*top: 0 !important;*/
-    /*bottom: 0 !important;*/
-    height: auto !important;
-    border: none !important;
-
-}
-
-#ember-testing {
-    width: 100% !important;
-    height: 100% !important;
-    transform: none !important;
-}
-
-#qunit {
-    position: absolute;
-}
-
-.overflow-hidden { overflow: hidden; }
-
-.add-top {
-  @media (max-width: 767px){
-    margin-top: 50px;
-  }
-}
-.add-extra-top {
-  padding-top: 15%;
-  padding-bottom: 25%;
-}
-
-
-.mtn {
-  &__1 {
-    z-index: 1;
-  }
-  &__2 {
-    z-index: 2;
-  }
-  &__3 {
-    z-index: 3;
-  }
-  &__4 {
-    z-index: 4;
-  }
-  &__5 {
-    z-index: 5;
-  }
-  &__6 {
-    z-index: 6;
-  }
-}
-
-.container {
-  display: flex;
-  margin: 100px;
-}
-.float-right {
-  align: right;
-  width: 50%;
-  display: inline-block;
 }
 
 /*
  * Extra utilities
  */
-
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
@@ -167,9 +32,5 @@ This is needed for testing!
     -webkit-box-flex: 1;
     flex: 1;
   }
-}
-
-.bootstrap-styles {
-  @import "ember-bootstrap/bootstrap";
 }
 
