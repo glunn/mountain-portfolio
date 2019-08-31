@@ -1,4 +1,12 @@
-.site-footer-component {
-  background-color: #3E3E3E;
-  padding: 50px;
+.bootstrap-styles {
+  .site-footer-component {
+    background-color: #3E3E3E;
+    padding: 50px;
+    a {
+      color: #D6D6D6;
+    }
+    a:hover {
+      color: white;
+    }
+  }
 }
