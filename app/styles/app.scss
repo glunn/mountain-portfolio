@@ -33,7 +33,47 @@
     flex: 1;
   }
 }
-
-.card {
-  width: 18rem;
+.row {
+  .card {
+    width: 18rem;
+  }
 }
+h1 {
+  .mysql img {
+    width: 50px;
+  }
+  .fa- {
+    &bootstrap {
+      color: #602C50;
+    }
+    &ember {
+    color: #f23819;
+    }
+    &github {
+      color: #333333;
+    }
+    &html5 {
+      color: #e34f26;
+    }
+    &sass {
+      color: #CD6799;
+    }
+    &node {
+      color: #68A063;
+    }
+    &python {
+      color: #4B8BBE;
+    }
+    &js {
+      color: #F0DB4F;
+    }
+    &adobe {
+      color: #EC1F28;
+    }
+    &npm {
+      color: #cb3837;
+    }
+  }
+}
+
+

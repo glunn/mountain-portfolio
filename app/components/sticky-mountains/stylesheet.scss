@@ -44,7 +44,6 @@
     .typed {
       max-width: 90vw;
       left: 30%;
-      top: 35%;
       display: inline;
       position: absolute;
       padding: 8px;
@@ -52,6 +51,13 @@
       color: #e2e9ea;
       font-size: 22px;
       width: max-content;
+
+      &:nth-of-type(1) {
+        top: 25%;
+      }
+      &:nth-of-type(2) {
+        top: 45%;
+      }
     }
   }
 /* start flashing cursor */
