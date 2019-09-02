@@ -1,6 +1,6 @@
 .sticky-mountains-component {
   .row {
-    background: linear-gradient(#F1E1DB 25%, #616161 25%);
+    background: linear-gradient(#F1E1DB 50%, #616161 50%);
     //background-color: #F1E1DB;
     overflow: hidden;
   }
@@ -25,16 +25,16 @@
     margin-left: -100%;
   }
   .mtn__3 img {
-    margin-left: -200%;
+    margin-left: -203%;
   }
   .mtn__4 img {
-    margin-left: -301%;
+    margin-left: -303%;
   }
   .mtn__5 img {
-    margin-left: -401%;
+    margin-left: -403%;
   }
   .mtn__6 img {
-    margin-left: -501%;
+    margin-left: -503%;
   }
   .mtn__6 {
     width: 100%;
@@ -44,13 +44,13 @@
     .typed {
       max-width: 90vw;
       left: 30%;
-      bottom: 60%;
+      top: 35%;
       display: inline;
       position: absolute;
       padding: 8px;
       background-color: #616161;
       color: #e2e9ea;
-      font-size: 20px;
+      font-size: 22px;
       width: max-content;
     }
   }
