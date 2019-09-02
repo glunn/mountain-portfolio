@@ -1,0 +1,6 @@
+{
+  "name": "mountain-portfolio",
+  "dependencies": {
+    "typed.js": "^1.1.1"
+  }
+}

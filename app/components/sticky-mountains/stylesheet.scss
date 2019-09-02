@@ -1,6 +1,6 @@
 .sticky-mountains-component {
   .row {
-    background: linear-gradient(#F1E1DB 50%, #616161 50%);
+    background: linear-gradient(#F1E1DB 25%, #616161 25%);
     //background-color: #F1E1DB;
     overflow: hidden;
   }
@@ -28,14 +28,58 @@
     margin-left: -200%;
   }
   .mtn__4 img {
-    margin-left: -300%;
+    margin-left: -301%;
   }
   .mtn__5 img {
-    margin-left: -400%;
+    margin-left: -401%;
   }
   .mtn__6 img {
-    margin-left: -500%;
+    margin-left: -501%;
   }
+  .mtn__6 {
+    width: 100%;
+    div {
+      margin-left: -500%;
+    }
+    .typed {
+      max-width: 90vw;
+      left: 30%;
+      bottom: 60%;
+      display: inline;
+      position: absolute;
+      padding: 8px;
+      background-color: #616161;
+      color: #e2e9ea;
+      font-size: 20px;
+      width: max-content;
+    }
+  }
+/* start flashing cursor */
+  .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+
+  @-webkit-keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+
+  @-moz-keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+  }
+/* end flashing cursor */
 
   .sticky-element {
     overflow: visible;
@@ -53,46 +97,18 @@
   }
 
   .large .sticky-element {
-      /* background-color: deepskyblue; */
-      height: 120vh;
+    /* background-color: deepskyblue; */
+    height: 120vh;
   }
 
-  // .debug {
-  //     background-color: red;
-  //     color: white;
-  //     padding: 5px 10px;
-  // }
-
   .demo {
-      display: flex;
-      // justify-content: space-around;
+    display: flex;
+    // justify-content: space-around;
   }
 
   .demo .col {
-      // border: solid 2px red;
-      width: 10%;
-  }
-
-  /*
-  This is needed for testing!
-  */
-  #ember-testing-container {
-      /*position: absolute !important;*/
-      /*top: 0 !important;*/
-      /*bottom: 0 !important;*/
-      height: auto !important;
-      border: none !important;
-
-  }
-
-  #ember-testing {
-      width: 100% !important;
-      height: 100% !important;
-      transform: none !important;
-  }
-
-  #qunit {
-      position: absolute;
+    // border: solid 2px red;
+    width: 10%;
   }
 
   .overflow-hidden { overflow: hidden; }
@@ -127,15 +143,5 @@
     &__6 {
       z-index: 6;
     }
-  }
-
-  .container {
-    display: flex;
-    margin: 100px;
-  }
-  .float-right {
-    align: right;
-    width: 50%;
-    display: inline-block;
   }
 }
