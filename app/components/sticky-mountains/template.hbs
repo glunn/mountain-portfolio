@@ -2,35 +2,55 @@
   <div class="col small bottom">
     {{#sticky-element top=10 class="sticky" bottom=500}}
       <div class="mtn__1">
-        <img src="/img/mtn1.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn1-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn1.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
   <div class="col small bottom">
     {{#sticky-element top=20 class="sticky" bottom=400}}
       <div class="mtn__2">
-        <img src="/img/mtn2.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn2-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn2.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
   <div class="col small bottom">
     {{#sticky-element top=30 class="sticky" bottom=300}}
       <div class="mtn__3">
-        <img src="/img/mtn3.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn3-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn3.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
   <div class="col small bottom">
     {{#sticky-element top=40 class="sticky" bottom=200}}
       <div class="mtn__4">
-        <img src="/img/mtn4.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn4-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn4.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
   <div class="col small bottom">
     {{#sticky-element top=50 class="sticky" bottom=100}}
       <div class="mtn__5">
-        <img src="/img/mtn5.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn5-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn5.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
@@ -44,7 +64,11 @@
           <span>I'm a Portland based Software Engineer and I build </span>
           {{typed-string strings=typedStrings loop=infinite typeSpeed=80 backSpeed=40 backDelay=500}}
         </div>
-        <img src="/img/mtn6.png" alt="Drawing of a mountain">
+        {{#if media.isMobile}}
+          <img src="/img/mtn6-mobile.png" alt="Drawing of a mountain">
+        {{else}}
+          <img src="/img/mtn6.png" alt="Drawing of a mountain">
+        {{/if}}
       </div>
     {{/sticky-element}}
   </div>
