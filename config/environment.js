@@ -16,6 +16,15 @@ module.exports = function(environment) {
         Date: false
       }
     },
+    'responsive-image': {
+      sourceDir: 'assets/images/generate',
+      destinationDir: 'assets/images/responsive',
+      quality: 80,
+      supportedWidths: [2048, 1536, 1080, 750, 640],
+      removeSourceDir: true,
+      justCopy: false,
+      extensions: ['jpg', 'jpeg', 'png', 'gif']
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
