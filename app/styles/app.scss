@@ -33,47 +33,76 @@
     flex: 1;
   }
 }
-.row {
-  .card {
-    width: 18rem;
+
+p {
+  font-weight: 100;
+}
+.bootstrap-styles {
+  .row {
+    .card {
+      max-width: 18rem;
+      border: 15px solid white;
+      &:hover {
+        background-color: #11161dc7;
+        img {
+          filter: brightness(50%);
+          //opacity: .8;
+        }
+      }
+    }
+  }
+  a {
+    height: 100%;
+    color: black;
+    &:hover {
+      color: $mountain-6;
+      text-decoration: none;
+      p, h5 {
+        color: #b5b6b7;
+      }
+    }
+  }
+  h1 {
+    .mysql img {
+      width: 50px;
+    }
+    .svg-inline--fa:hover, .fa:hover {
+      filter: brightness(50%);
+    }
+    .fa- {
+      &bootstrap {
+        color: #602C50;
+      }
+      &ember {
+      color: #f23819;
+      }
+      &github {
+        color: #333333;
+      }
+      &html5 {
+        color: #e34f26;
+      }
+      &sass {
+        color: #CD6799;
+      }
+      &node {
+        color: #68A063;
+      }
+      &python {
+        color: #4B8BBE;
+      }
+      &js {
+        color: #F0DB4F;
+      }
+      &adobe {
+        color: #EC1F28;
+      }
+      &npm {
+        color: #cb3837;
+      }
+    }
   }
 }
-h1 {
-  .mysql img {
-    width: 50px;
-  }
-  .fa- {
-    &bootstrap {
-      color: #602C50;
-    }
-    &ember {
-    color: #f23819;
-    }
-    &github {
-      color: #333333;
-    }
-    &html5 {
-      color: #e34f26;
-    }
-    &sass {
-      color: #CD6799;
-    }
-    &node {
-      color: #68A063;
-    }
-    &python {
-      color: #4B8BBE;
-    }
-    &js {
-      color: #F0DB4F;
-    }
-    &adobe {
-      color: #EC1F28;
-    }
-    &npm {
-      color: #cb3837;
-    }
-  }
-}
+
 
 
