@@ -39,15 +39,14 @@ p {
 }
 .bootstrap-styles {
   .row {
+    max-width: 1500px;
+
     .card {
       max-width: 18rem;
       border: 15px solid white;
       &:hover {
         background-color: #11161dc7;
-        img {
-          filter: brightness(50%);
-          //opacity: .8;
-        }
+        img { filter: brightness(50%); }
       }
     }
   }
@@ -78,6 +77,9 @@ p {
       }
       &github {
         color: #333333;
+        &:hover {
+          opacity: .6;
+        }
       }
       &html5 {
         color: #e34f26;
