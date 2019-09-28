@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('awesome', {path:'/'});
   this.route('awesome');
+  this.route('alpaca');
 });
 
 export default Router;
