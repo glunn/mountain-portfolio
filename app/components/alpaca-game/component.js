@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import Spriteling from 'spriteling';
+import $ from 'jquery';
 
 export default Component.extend({
   alpacaSprite: {},
@@ -33,8 +34,14 @@ export default Component.extend({
     this.set('alpacaSprite', sprite);
   },
   didRender() {
-    this.$().attr({ tabindex: 1 });
-    this.$().focus();
+    // Only focus if game key pressed, then turn off listener
+    $(document).on('keydown', function (event) {
+      if (event.keyCode == 68 || event.keyCode == 65 || event.keyCode == 87 || event.keyCode == 83) {
+        $('#alpaca-game-component').attr({ tabindex: 1 });
+        $('#alpaca-game-component').focus();
+        $(this).off(event);
+      }
+    });
   },
 
   keyDown(event) {
@@ -92,7 +99,7 @@ export default Component.extend({
     if (event.keyCode == 83) { // down
       topPosition = topPosition + 10;
       this.set('topPosition', topPosition);
-      
+
       document.getElementById("moveDiv").style.top = topPosition + "px";
     }
   },
