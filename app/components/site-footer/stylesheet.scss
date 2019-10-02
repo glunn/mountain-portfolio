@@ -8,5 +8,8 @@
     a:hover {
       color: white;
     }
+    @media (max-width: $screen-xs) {
+      padding-left: 10px;
+    }
   }
 }
