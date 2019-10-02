@@ -1,5 +1,6 @@
 @import "partials/variables";
 @import 'app/components/alpaca-game/stylesheet';
+@import 'app/components/keyboard-keys/stylesheet';
 @import 'app/components/site-footer/stylesheet';
 @import 'app/components/sticky-mountains/stylesheet';
 
@@ -21,20 +22,6 @@
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
-.sr-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
 
 .flex-equal > * {
   -ms-flex: 1;

@@ -39,7 +39,7 @@ export default Component.extend({
       if (event.keyCode == 68 || event.keyCode == 65 || event.keyCode == 87 || event.keyCode == 83) {
         $('#move-sprite').attr({ tabindex: 1 });
         $('#move-sprite').focus();
-        $(this).off(event);
+        //$(this).off(event);
       }
     });
   },
