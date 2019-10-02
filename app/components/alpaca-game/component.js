@@ -6,7 +6,7 @@ export default Component.extend({
   alpacaSprite: {},
   spriteScript: '',
   facingLeft: false,
-  leftPosition: 50,
+  leftPosition: 100,
   topPosition: 0,
 
   didInsertElement() {
