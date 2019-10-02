@@ -37,8 +37,8 @@ export default Component.extend({
     // Only focus if game key pressed, then turn off listener
     $(document).on('keydown', function (event) {
       if (event.keyCode == 68 || event.keyCode == 65 || event.keyCode == 87 || event.keyCode == 83) {
-        $('#alpaca-game-component').attr({ tabindex: 1 });
-        $('#alpaca-game-component').focus();
+        $('#move-sprite').attr({ tabindex: 1 });
+        $('#move-sprite').focus();
         $(this).off(event);
       }
     });
@@ -63,7 +63,7 @@ export default Component.extend({
         });
       }
 
-      document.getElementById("moveDiv").style.left = leftPosition + "px";
+      document.getElementById("move-sprite").style.left = leftPosition + "px";
       this.set('spriteScript', 'runRight');
       this.set('facingLeft', false);
     }
@@ -77,7 +77,7 @@ export default Component.extend({
           delay: 150
         });
       }
-      document.getElementById("moveDiv").style.left = leftPosition + "px";
+      document.getElementById("move-sprite").style.left = leftPosition + "px";
       this.set('spriteScript', 'runLeft');
       this.set('facingLeft', true);
     }
@@ -94,13 +94,13 @@ export default Component.extend({
         this.set('spriteScript', 'jumpRight');
       }
 
-      document.getElementById("moveDiv").style.top = topPosition + "px";
+      document.getElementById("move-sprite").style.top = topPosition + "px";
     }
     if (event.keyCode == 83) { // down
       topPosition = topPosition + 10;
       this.set('topPosition', topPosition);
 
-      document.getElementById("moveDiv").style.top = topPosition + "px";
+      document.getElementById("move-sprite").style.top = topPosition + "px";
     }
   },
   keyUp() {
