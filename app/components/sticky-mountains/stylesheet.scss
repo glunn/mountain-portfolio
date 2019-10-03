@@ -1,8 +1,25 @@
 .sticky-mountains-component {
   .row {
-    background: linear-gradient(#F1E1DB 50%, #616161 50%);
-    //background-color: #F1E1DB;
     overflow: hidden;
+
+    /* custom filler to reconcile pinned mts and following content */
+    background: linear-gradient($sunset 55%, $mountain-6 45%);
+    @media (max-width: $screen-md) {
+      background: linear-gradient($sunset 400px, $mountain-6 80px);
+    }
+    @media (min-height: 800px) and (max-width: $screen-lg) {
+      background: linear-gradient($sunset 30%, $mountain-6 10%);
+      .mtn__6:after {
+        transform: translate(-40%);
+        margin-left: -100%;
+        content: "\a0";
+        display: flex;
+        margin-top: -10px;
+        line-height: 1px;
+        width: 100vw;
+        border-bottom: 350px solid $mountain-6;
+      }
+    }
   }
 
   .col {
