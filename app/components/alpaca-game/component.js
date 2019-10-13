@@ -3,7 +3,7 @@ import Spriteling from 'spriteling';
 import $ from 'jquery';
 
 export default Component.extend({
-  alpacaSprite: {},
+  alpacaSprite: undefined,
   spriteScript: '',
   facingLeft: false,
   leftPosition: 100,
