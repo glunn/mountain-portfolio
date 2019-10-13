@@ -2,13 +2,25 @@
   .portfolio-cards-component {
     .row {
       max-width: 1500px;
+      background-color: #e6dedb;
+      border-top: 15px solid white;
 
       .card {
         max-width: 18rem;
-        border: 15px solid white;
+        background-color: white;
+        border: 2px solid white;
+        img { filter: brightness(80%); }
+
         &:hover {
-          background-color: #11161dc7;
-          img { filter: brightness(50%); }
+          border: none;
+          background-color: white;
+          img { filter: brightness(100%); }
+          .card-body {
+            border: 2px solid white;
+          }
+        }
+        .card-body {
+          padding-right: 20%;
         }
       }
     }
@@ -19,7 +31,7 @@
         color: $mountain-6;
         text-decoration: none;
         p, h6 {
-          color: #b5b6b7;
+          color: black;
         }
       }
     }
@@ -28,7 +40,7 @@
         width: 50px;
       }
       .svg-inline--fa:hover, .fa:hover {
-        filter: brightness(50%);
+        filter: brightness(150%);
       }
       .fa- {
         &bootstrap {
