@@ -16,7 +16,9 @@
           background-color: white;
           img { filter: brightness(100%); }
           .card-body {
-            border: 2px solid white;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            border-radius: 1em;
           }
         }
         .card-body {
