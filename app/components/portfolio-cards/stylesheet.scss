@@ -1,20 +1,30 @@
 .bootstrap-styles {
   .portfolio-cards-component {
+    background-color: #e6dedb;
+
+    .jumbotron {
+      border-bottom: 15px solid white;
+    }
     .row {
-      max-width: 1500px;
-      background-color: #e6dedb;
-      border-top: 15px solid white;
+      max-width: 1450px;
 
       .card {
-        max-width: 18rem;
         background-color: white;
         border: 2px solid white;
+        height: 450px;
+        width: 18rem;
+        margin-top: 2px;
         img { filter: brightness(80%); }
 
         &:hover {
           border: none;
           background-color: white;
-          img { filter: brightness(100%); }
+          a { margin-top: 2px; }
+
+          img {
+            filter: brightness(100%);
+            margin-top: -2px;
+          }
           .card-body {
             border-left: 2px solid white;
             border-right: 2px solid white;
