@@ -12,15 +12,6 @@ module('Integration | Component | site-footer', function(hooks) {
 
     await render(hbs`{{site-footer}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#site-footer}}
-        template block text
-      {{/site-footer}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.replace(/\s+/g, "").trim(), 'https://github.com/glunnhttps://www.linkedin.com/in/aglunn/');
   });
 });
