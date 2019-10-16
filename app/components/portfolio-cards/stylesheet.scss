@@ -11,7 +11,7 @@
       .card {
         background-color: white;
         border: 2px solid white;
-        height: 450px;
+        min-height: 450px;
         width: 18rem;
         margin-top: 2px;
         img { filter: brightness(80%); }
