@@ -1,7 +1,10 @@
 <div class="bootstrap-styles">
   {{portfolio-cards}}
   <div class="d-flex justify-content-start">
-    {{keyboard-keys}}
+    <KeyboardKeys
+      @top={{top}}
+      @left={{left}}
+      @sprite={{alpacaSprite}} />
   </div>
   <div class="d-flex justify-content-start">
     <div id="move-sprite" style="position: relative; left: 100px; top: 0px; width: 30px; height: 32px;" {{! template-lint-disable no-inline-styles }}>

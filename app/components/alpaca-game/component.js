@@ -5,9 +5,10 @@ import $ from 'jquery';
 export default Component.extend({
   alpacaSprite: undefined,
   spriteScript: '',
-  facingLeft: false,
-  leftPosition: 100,
-  topPosition: 0,
+  forward: false,
+  left: 100,
+  top: 0,
+  direction: undefined,
 
   didInsertElement() {
     this._super(...arguments);
@@ -47,14 +48,14 @@ export default Component.extend({
   keyDown(event) {
     const sprite = this.alpacaSprite;
     const spriteScript = this.spriteScript;
-    let facingLeft = this.facingLeft;
-    let leftPosition = this.leftPosition;
-    let topPosition = this.topPosition;
+    let forward = this.forward;
+    let left = this.left;
+    let top = this.top;
     const currentSprite = sprite.currentSprite();
 
     if (event.keyCode == 68) { // right
-      leftPosition = leftPosition + 10;
-      this.set('leftPosition', leftPosition);
+      left = left + 10;
+      this.set('left', left);
 
       if (spriteScript !== 'runRight' || currentSprite === 11) {
         sprite.play('runRight', {
@@ -63,13 +64,13 @@ export default Component.extend({
         });
       }
 
-      document.getElementById("move-sprite").style.left = leftPosition + "px";
+      document.getElementById("move-sprite").style.left = left + "px";
       this.set('spriteScript', 'runRight');
-      this.set('facingLeft', false);
+      this.set('forward', false);
     }
     if (event.keyCode == 65) { // left
-      leftPosition = leftPosition - 10;
-      this.set('leftPosition', leftPosition);
+      left = left - 10;
+      this.set('left', left);
 
       if (spriteScript !== 'runLeft') {
         sprite.play('runLeft', {
@@ -77,16 +78,16 @@ export default Component.extend({
           delay: 150
         });
       }
-      document.getElementById("move-sprite").style.left = leftPosition + "px";
+      document.getElementById("move-sprite").style.left = left + "px";
       this.set('spriteScript', 'runLeft');
-      this.set('facingLeft', true);
+      this.set('forward', true);
     }
     if (event.keyCode == 87) { // up
-      topPosition = topPosition - 10;
-      this.set('topPosition', topPosition);
+      top = top - 10;
+      this.set('top', top);
       sprite.next();
 
-      if (facingLeft) {
+      if (forward) {
         sprite.showSprite(2);
         this.set('spriteScript', 'jumpLeft');
       } else {
@@ -94,13 +95,13 @@ export default Component.extend({
         this.set('spriteScript', 'jumpRight');
       }
 
-      document.getElementById("move-sprite").style.top = topPosition + "px";
+      document.getElementById("move-sprite").style.top = top + "px";
     }
     if (event.keyCode == 83) { // down
-      topPosition = topPosition + 10;
-      this.set('topPosition', topPosition);
+      top = top + 10;
+      this.set('top', top);
 
-      document.getElementById("move-sprite").style.top = topPosition + "px";
+      document.getElementById("move-sprite").style.top = top + "px";
     }
   },
   keyUp() {
@@ -122,5 +123,6 @@ export default Component.extend({
       });
       this.set('spriteScript', 'standRight');
     }
+    this.set('alpacaSprite', sprite);
   }
 });

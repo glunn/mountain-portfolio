@@ -4,4 +4,8 @@
   <p>{{typedStrings}}</p>
 </div>
 {{sticky-mountains typedStrings=this.typedStrings}}
-{{alpaca-game}}
+  {{#each this.model as |rental|}}
+  ok
+  {{rental.forward}}
+  {{/each}}
+<AlpacaGame @alpaca={{this.model}} />

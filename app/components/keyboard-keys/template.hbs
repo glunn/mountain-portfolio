@@ -1,21 +1,34 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="key col-3">
-      <span>w</span>
-    </div>
+    {{keyboard-keys/key
+      alpaca=alpaca
+      letter="w"
+      press=(perform onClickUp 1)
+      release=(cancel-all onClickUp)}}
   </div>
   <div class="row justify-content-center">
-    <div class="key col-3">
-      <span>a</span>
-    </div>
-    <div class="key col-3">
-      <span>s</span>
-    </div>
-    <div class="key col-3">
-      <span>d</span>
-    </div>
+    {{keyboard-keys/key
+      alpaca=alpaca
+      sprite=sprite
+      letter="a"
+      press=(perform onClickLeft 1)
+      release=(cancel-all onClickLeft)}}
+    {{left}}
+    {{keyboard-keys/key
+      alpaca=alpaca
+      sprite=sprite
+      letter="s"
+      press=(perform onClickDown 1)
+      release=(cancel-all onClickDown)}}
+    {{keyboard-keys/key
+      alpaca=alpaca
+      sprite=sprite
+      letter="d"
+      press=(perform onClickRight 1)
+      release=(cancel-all onClickRight)}}
   </div>
 </div>
-
+{{forward}}
+{{top}}
 
 
