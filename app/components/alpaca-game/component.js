@@ -65,7 +65,7 @@ export default Component.extend({
 
     if (event.keyCode == 87) { // up
       top = top - 10;
-      set(this, 'sprite.top', top);
+      // set(this, 'sprite.top', top);
       spriteling.next();
 
       if (!forward) {
@@ -76,6 +76,8 @@ export default Component.extend({
         this.set('sprite.action', 'jumpRight');
       }
       document.getElementById("move-sprite").style.top = top + "px";
+      this.set('sprite.top', top);
+      console.log(top);
     }
 
     if (event.keyCode == 83) { // down
