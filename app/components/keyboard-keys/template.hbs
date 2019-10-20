@@ -1,19 +1,23 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="key col-3">
-      <span>w</span>
-    </div>
+    {{keyboard-key
+      letter="w"
+      press=(perform onClickUp 2)
+      release=(cancel-all onClickUp)}}
   </div>
   <div class="row justify-content-center">
-    <div class="key col-3">
-      <span>a</span>
-    </div>
-    <div class="key col-3">
-      <span>s</span>
-    </div>
-    <div class="key col-3">
-      <span>d</span>
-    </div>
+    {{keyboard-key
+      letter="a"
+      press=(perform onClickLeft 2)
+      release=(cancel-all onClickLeft)}}
+    {{keyboard-key
+      letter="s"
+      press=(perform onClickDown 2)
+      release=(cancel-all onClickDown)}}
+    {{keyboard-key
+      letter="d"
+      press=(perform onClickRight 2)
+      release=(cancel-all onClickRight)}}
   </div>
 </div>
 
