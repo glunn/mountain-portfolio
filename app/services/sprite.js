@@ -1,6 +1,5 @@
 import Service from '@ember/service';
 import Spriteling from 'spriteling';
-import $ from 'jquery';
 
 export default Service.extend({
   spriteling: undefined,
