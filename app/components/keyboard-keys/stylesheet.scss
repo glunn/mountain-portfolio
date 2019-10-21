@@ -7,6 +7,7 @@
     }
     button {
       border: none;
+      background-color: transparent;
     }
     &.right {
       .right-key {
@@ -50,7 +51,7 @@
     }
     .key {
       width:35px;
-      height: 37px;
+      height: 39px;
       padding: 1px;
       margin: 10px;
       border: none;
@@ -74,6 +75,12 @@
       	-moz-box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
       	box-shadow: 0px 3px 0px -2px rgba(255,255,255,1), 0px 2px 0px 0px rgba(169,169,169,1);
       	cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version - Chrome and Opera */
 
         &:hover {
           cursor: pointer;
