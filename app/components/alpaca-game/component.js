@@ -1,11 +1,11 @@
 import Component from '@ember/component';
-import Spriteling from 'spriteling';
 import { get, set } from '@ember/object';
 import $ from 'jquery';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
   sprite: service(),
+  keyClass: '',
 
   didInsertElement() {
     this._super(...arguments);
@@ -46,6 +46,7 @@ export default Component.extend({
       document.getElementById("move-sprite").style.left = left + "px";
       this.set('sprite.action', 'runRight');
       this.set('sprite.forward', true);
+      this.set('keyClass', 'right');
     }
 
     if (event.keyCode == 65) { // left
@@ -61,6 +62,7 @@ export default Component.extend({
       document.getElementById("move-sprite").style.left = left + "px";
       this.set('sprite.action', 'runLeft');
       this.set('sprite.forward', false);
+      this.set('keyClass', 'left');
     }
 
     if (event.keyCode == 87) { // up
@@ -77,12 +79,13 @@ export default Component.extend({
       }
       document.getElementById("move-sprite").style.top = top + "px";
       this.set('sprite.top', top);
-      console.log(top);
+      this.set('keyClass', 'up');
     }
 
     if (event.keyCode == 83) { // down
       top = top + 10;
       set(this, 'sprite.top', top);
+      this.set('keyClass', 'down');
       document.getElementById("move-sprite").style.top = top + "px";
     }
   },
@@ -105,5 +108,6 @@ export default Component.extend({
       });
       this.set('sprite.action', 'standRight');
     }
+    this.set('keyClass', '');
   }
 });

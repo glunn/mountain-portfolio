@@ -9,8 +9,6 @@ export default Component.extend({
 
   onClickLeft: task(function * (inc) {
     let spriteling = get(this, 'sprite.spriteling');
-    let action = get(this, 'sprite.action');
-    let forward = get(this, 'sprite.forward');
     let left = get(this, 'sprite.left');
 
     spriteling.play('runLeft', {
@@ -30,8 +28,6 @@ export default Component.extend({
   }),
   onClickRight: task(function * (inc) {
     let spriteling = get(this, 'sprite.spriteling');
-    let action = get(this, 'sprite.action');
-    let forward = get(this, 'sprite.forward');
     let left = get(this, 'sprite.left');
 
     spriteling.play('runRight', {
@@ -63,7 +59,6 @@ export default Component.extend({
     let top = get(this, 'sprite.top');
     let spriteling = get(this, 'sprite.spriteling');
     let forward = get(this, 'sprite.forward');
-    let currentSprite = spriteling.currentSprite();
     spriteling.next();
 
     if (!forward) {

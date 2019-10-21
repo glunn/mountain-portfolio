@@ -13,14 +13,5 @@ module('Integration | Component | keyboard-key', function(hooks) {
     await render(hbs`{{keyboard-key}}`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#keyboard-key}}
-        template block text
-      {{/keyboard-key}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

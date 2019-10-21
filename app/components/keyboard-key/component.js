@@ -1,9 +1,8 @@
 import Component from '@ember/component';
-import { get, set } from '@ember/object';
+import { get } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 function sendPress() {
-  console.log('send press');
   this.sendAction('press');
 }
 
@@ -11,7 +10,6 @@ function sendRelease() {
   this.sendAction('release');
   let spriteling = get(this, 'sprite.spriteling');
   const currentSprite = spriteling.currentSprite();
-  console.log(currentSprite);
 
   if (currentSprite < 7) {
     spriteling.play({
@@ -33,6 +31,7 @@ function sendRelease() {
 export default Component.extend({
   sprite: service(),
   tagName: 'button',
+  classNames: 'key col-3',
   letter: '',
   touchStart: sendPress,
   mouseDown:  sendPress,
