@@ -1,3 +1,17 @@
+{{#if (user-agent "browser.isIE")}}
+  <div class="ie-alert">
+    <div>
+      To avoid security vulerabilities (and best view this site) please update to a modern browser such as Chrome, Firefox or Edge.
+    </div>
+    <div>
+      Given my audience, chances are if you're reading this it's because you care deeply about cross-browser compatability -- and so do I!
+    </div>
+    <div>
+      Per the <a href="https://www.us-cert.gov/ncas/current-activity/2020/01/17/microsoft-releases-security-advisory-internet-explorer" target="_blank" rel="noopener">Department of Homeland Security</a>
+      IE use is highly discouraged at this time.
+    </div>
+  </div>
+{{/if}}
 <div class="demo row">
   <div class="col small bottom">
     {{#sticky-element top=10 class="sticky" bottom=500}}
